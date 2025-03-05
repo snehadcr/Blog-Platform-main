@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Blog Platform</h1>
+        <div id="user-actions">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+            <button id="logout-btn" style="display: none;">Logout</button>
+            <a href="#" class="header-link">Home</a>
+            <a href="#" class="header-link">About</a>
+            <a href="#" class="header-link">Contact</a>
+        </div>
+    </header>
+    <nav>
+        <div id="theme-customizer">
+            <h3>Customize Theme</h3>
+            <label for="bg-color">Background Color:</label>
+            <input type="color" id="bg-color" value="#ffffff">
+            <label for="text-color">Text Color:</label>
+            <input type="color" id="text-color" value="#000000">
+            <button id="light-theme">Light</button>
+            <button id="dark-theme">Dark</button>
+        </div>
+        <div id="search-filter">
+            <input type="text" id="search-input" placeholder="Search blogs...">
+            <select id="filter-select">
+                <option value="all">All</option>
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="content">Content</option>
+            </select>
+        </div>
+    </nav>
+    <main>
+        <div id="front-page">
+            <h2>Welcome to our Travel Blog Platform</h2>
+            <p>Create, share, and explore amazing travel blogs !</p>
+            <div id="public-blog-list" class="blog-list"></div>
+        </div>
+        <div id="user-blog-list" class="blog-list" style="display: none;"></div>
+        <div id="blog-editor" style="display: none;">
+            <h2>Create New Blog Post</h2>
+            <input type="text" id="blog-title" placeholder="Blog Title">
+            <textarea id="blog-content" placeholder="Write your blog post in Markdown"></textarea>
+            <input type="file" id="imageUpload" />
+            <button id="publish-btn">Publish</button>
+        </div>
+    </main>
+    <div id="login-container" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="auth-title">Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="auth-submit">Submit</button>
+            <p id="auth-message"></p>
+        </div>
+    </div>
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
